@@ -1,41 +1,10 @@
-{% extends "base.html" %}
-{% block content %}
-<div id="_box">
-   <div id="description" align="center">Taking education to the next level.</div>
-   <div id="invite_box" align="center">
-      <form method="POST" action="/getinvite">
-         {{ form.csrf }}
-         {{ form.email(size=40, onFocus='foc(this);', onBlur='blu(this);',id='invite_field', class='header_text_field content_text_field', title='enter your email to get an invitation') }}
-         <input class="header_button content_button" type="Submit" value="Request" />
-      </form>
-   </div>
-</div>
-<script language="javascript">
-   function foc(src) {
-      if ($(src).val() == $(src)[0].title) {
-         if(src.id == "fake_mypass") {
-            $('#fake_mypass').hide();
-            $('#mypass').show().focus();
-         }
-         $(src).removeClass(" text_field_blur");
-         $(src).val("");
-      }
-   }
-   function blu(src) {
-      if ($(src).val() == "") {
-         if(src.id == "mypass") {
-            $('#mypass').hide();
-            $('#fake_mypass').show();
-            $('#fake_mypass').addClass("text_field_blur");
-            $('#fake_mypass').val($(src)[0].title);
-            return;
-         }
-         $(src).addClass(" text_field_blur");
-         $(src).val($(src)[0].title);
-      }
-   }
-   blu(document.getElementById('mypass'));
-   blu(document.getElementById('myemail'));
-   blu(document.getElementById('invite_field'));
-</script>
-{% endblock %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml/DTD/xhtml-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+   <head>
+     
+   </head>
+   <body>
+     <h1>Hello World</h1>
+   </body>
+</body>
+</html>
